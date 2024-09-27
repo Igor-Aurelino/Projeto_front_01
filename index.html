@@ -9,13 +9,21 @@
 </head>
 <body>
     <div id="container">
+        <div id="menu_lateral">
+            <h1 onclick="fecharMenu()"> x </h1>
+            <div class="item_menu menu_ativado"> Home </div>
+            <div class="item_menu"> Serviços </div>
+            <div class="item_menu"> Sobre Nós </div>
+            <div class="item_menu"> Nosso Time </div>
+            <div class="item_menu"> Contato </div>
+         </div><!-- Fim menu menu_lateral -->
         <div id="menu_mobile_tablet">
-            <i class="fi fi-br-menu-burger"></i>
+            <i class="fi fi-br-menu-burger" onclick="abrirMenu()"></i>
 
         </div>
         <div id="menu_topo">
             <img src="imagens/logomarca_branca.png" height="70">
-            
+        
             <div id="caixa_menus">
                 <div class="item_menu menu_ativado"> Home </div>
                 <div class="item_menu"> Serviços </div>
@@ -24,7 +32,6 @@
                 <div class="item_menu"> Contato </div>
             </div>
         </div> <!-- Fim do menu topo  -->
-
         <div id="banner">
             <div id="mensagem">
                 <h1>Educação infantil de qualidade  </h1>
@@ -61,7 +68,6 @@
                     </p>
                 </div>
              </div> <!-- Fim da secao 02 -->
-
              <div id="rodape">
                 <div id="coluna1" class="conteudos_rodapes">
                     <h1> Lorem Ipsum dolor</h1>
@@ -88,5 +94,15 @@
                 </div>
             </div> <!--  Fim do rodape -->
     </div> <!--Fim do container-->
+    <script>
+        function abrirMenu(){
+            var minhaDiv = document.getElementById("menu_lateral");
+            minhaDiv.classList.add("aparecer");
+        }
+        function fecharMenu(){
+            var minhaDiv = document.getElementById("menu_lateral");
+            minhaDiv.classList.remove("aparecer");
+        }
+    </script>
 </body>
 </html>
